@@ -14,7 +14,7 @@ public:
 		gameModel(gameModel)
 	{}
 
-	void OpenWindow(Simulation *sim, int toolSelection, int rule = 0, RGB<uint8_t> colour1 = 0x000000_rgb, RGB<uint8_t> colour2 = 0x000000_rgb);
+	void OpenWindow(Simulation *sim, int toolSelection, int rule = 0, RGB colour1 = 0x000000_rgb, RGB colour2 = 0x000000_rgb);
 	void Click(Simulation * sim, Brush const &brush, ui::Point position) override { }
 	void Draw(Simulation *sim, Brush const &brush, ui::Point position) override { };
 	void DrawLine(Simulation * sim, Brush const &brush, ui::Point position1, ui::Point position2, bool dragging) override { };

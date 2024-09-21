@@ -5,7 +5,7 @@ class ElementTool: public Tool
 {
 public:
 	ElementTool(int id, String name, String description,
-		RGB<uint8_t> colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
+		RGB colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
 		Tool(id, name, description, colour, identifier, textureGen)
 	{}
 
@@ -19,7 +19,7 @@ class Element_LIGH_Tool: public ElementTool
 {
 public:
 	Element_LIGH_Tool(int id, String name, String description,
-		RGB<uint8_t> colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
+		RGB colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
 		ElementTool(id, name, description, colour, identifier, textureGen)
 	{}
 
@@ -33,7 +33,7 @@ class Element_TESC_Tool: public ElementTool
 {
 public:
 	Element_TESC_Tool(int id, String name, String description,
-		RGB<uint8_t> colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
+		RGB colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
 		ElementTool(id, name, description, colour, identifier, textureGen)
 	{}
 
@@ -45,7 +45,7 @@ class PlopTool: public ElementTool
 {
 public:
 	PlopTool(int id, String name, String description,
-		RGB<uint8_t> colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
+		RGB colour, ByteString identifier, std::unique_ptr<VideoBuffer> (*textureGen)(int, Vec2<int>) = NULL):
 		ElementTool(id, name, description, colour, identifier, textureGen)
 	{}
 

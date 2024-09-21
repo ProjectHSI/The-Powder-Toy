@@ -314,13 +314,13 @@ static int property(lua_State *L)
 			if (lua_gettop(L) > 2)
 			{
 				if      constexpr (std::is_same_v<PropertyType, String      >) thing = tpt_lua_checkString(L, 3);
-				else if constexpr (std::is_same_v<PropertyType, RGB<uint8_t>>) thing = RGB<uint8_t>::Unpack(luaL_checkinteger(L, 3));
+				else if constexpr (std::is_same_v<PropertyType, RGB>) thing = RGB::Unpack(luaL_checkinteger(L, 3));
 				else static_assert(DependentFalse<PropertyType>::value);
 			}
 			else
 			{
 				if      constexpr (std::is_same_v<PropertyType, String      >) tpt_lua_pushString(L, thing);
-				else if constexpr (std::is_same_v<PropertyType, RGB<uint8_t>>) lua_pushinteger(L, thing.Pack());
+				else if constexpr (std::is_same_v<PropertyType, RGB>) lua_pushinteger(L, thing.Pack());
 				else static_assert(DependentFalse<PropertyType>::value);
 				returnValueCount = 1;
 			}
